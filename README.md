@@ -30,6 +30,7 @@ edgeInformation.txt: stores the following:
 			...
 			
 Steps:
+
 	* gcc --static test.c -o victim.out
 	
 	* python3 callgraph.py
