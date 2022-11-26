@@ -41,11 +41,17 @@ Steps:
 	
 
 make		: runs the script makefile to compile and execute other files for legal system call checking.
+
 main.c		: Accepts 4 arguments: <file containing node info> <file containing edge info> <executable> <path to executable>
+	
 reader.c	: reads the input files and creates the automata in tabular form.
+	
 nodeStructure.c : creates the linked list of unique nodes of the system call graph.
+	
 graphStructure.c: creates the structure (adjacency matrix) to store the automata.
+	
 systemcallhandler.c: handles the system calls and make decisions.
+	
 automataSimulation.c: simulates the automata based on system calls.
 
 Necessary header files are also there.
