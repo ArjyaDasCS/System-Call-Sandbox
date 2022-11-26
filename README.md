@@ -7,22 +7,37 @@ Input: victim.out (Executable of test.c)
 Output: nodeInformation.txt and edgeInformation.txt
 
 nodeInformation.txt: stores the following:
+
 			* entry point
+			
 			* number of unique source nodes
+			
 			* node addresses (in each line)
+			
 
 edgeInformation.txt: stores the following:
+
 			* number of unique source nodes
+			
 			* source node 1
+			
 			* number of successors of source node 1
+			
 			* system call name for successor 'a'
+			
 			* address of successor 'a'
+			
 			...
+			
 Steps:
 	* gcc --static test.c -o victim.out
+	
 	* python3 callgraph.py
+	
 	* make
+	
 	* ./a.out nodeInformation.txt edgeInformation.txt attack.out /home/fmse/vbox-shared/attack.out
+	
 
 make		: runs the script makefile to compile and execute other files for legal system call checking.
 main.c		: Accepts 4 arguments: <file containing node info> <file containing edge info> <executable> <path to executable>
